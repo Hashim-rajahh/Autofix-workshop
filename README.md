@@ -8,13 +8,13 @@ Responsive home page for AutoFix Workshop, a local car repair shop. This is Task
 - `eslint.config.js` and `.github/workflows/ci.yml`: linting and CI that runs on every push
 
 ## Setup
-1. Clone the repo: `git clone https://github.com/<your-username>/autofix-workshop.git`
+1. Clone the repo: `git clone https://github.com/Hashim-rajahh/Autofix-workshop.git`
 2. Install dev tools: `npm install`
 3. Run the linter: `npm run lint`
 4. Open `index.html` in your browser (or use the VS Code Live Server extension)
 
 ## Live preview
-https://<your-username>.github.io/autofix-workshop/
+https://Hashim-rajahh.github.io/Autofix-workshop/
 
 ## Roadmap
 1. Repo and home page (this task)

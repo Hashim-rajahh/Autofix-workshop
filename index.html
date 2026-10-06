@@ -28,7 +28,10 @@
           <p>Friendly local mechanics, clear prices and no surprises. Book a service or bring your car in for a free check.</p>
           <a class="btn" href="#contact">Book a visit</a>
         </div>
-        <img class="hero-img" src="assets/hero.jpg.jpg" width="640" height="420" alt="Mechanic working on a car in the workshop">
+        <picture>
+          <source type="image/webp" srcset="assets/hero.webp">
+          <img class="hero-img" src="assets/hero.jpg" width="960" height="640" fetchpriority="high" alt="Mechanic working on a car in the workshop">
+</picture>
       </div>
     </section>
 
@@ -37,17 +40,26 @@
         <h2 id="services-title">What we fix</h2>
         <ul class="card-grid">
           <li class="card">
-            <img src="assets/service-engine.jpg.jpg" width="96" height="96" alt="">
+            <picture>
+              <source type="image/webp" srcset="assets/service-engine.webp">
+              <img src="assets/service-engine.jpg" width="600" height="400" loading="lazy" alt="Engine diagnostics in progress">
+            </picture>
             <h3>Engine diagnostics</h3>
             <p>Warning light on? We read the fault codes and explain the problem in plain words.</p>
           </li>
           <li class="card">
-            <img src="assets/service-brakes.jpg.jpg" width="96" height="96" alt="">
+            <picture>
+              <source type="image/webp" srcset="assets/service-brakes.webp">
+              <img src="assets/service-brakes.jpg" width="600" height="400" loading="lazy" alt="brake diagnostics in progress">
+            </picture>
             <h3>Brakes and tyres</h3>
             <p>Pad and disc replacement, tyre fitting and balancing, and wheel alignment.</p>
           </li>
           <li class="card">
-            <img src="assets/service-oil.jpg.jpg" width="96" height="96" alt="">
+           <picture>
+              <source type="image/webp" srcset="assets/service-oil.webp">
+              <img src="assets/service-oil.jpg" width="600" height="400" loading="lazy" alt="oil diagnostics in progress">
+            </picture>
             <h3>Oil and full service</h3>
             <p>Regular servicing that keeps your car reliable and your warranty intact.</p>
           </li>

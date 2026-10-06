@@ -100,13 +100,14 @@ a { color: inherit; }
   border-radius: var(--radius);
   padding: 1.5rem;
 }
-.card img {
+.card picture img {
   width: 100%;
   aspect-ratio: 3 / 2;
   object-fit: cover;
   border-radius: 6px;
   margin-bottom: 1rem;
 }
+.card picture { display: block; }
 .hero-img {
   width: 100%;
   aspect-ratio: 3 / 2;

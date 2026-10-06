@@ -19,3 +19,6 @@
 ## Checks after every change
 - The page still looks correct on phone, tablet and desktop widths.
 - The lint step in CI stays green.
+
+
+"Re-ran the audit after image optimisation; report in reports/after-images.html."

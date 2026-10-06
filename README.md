@@ -43,9 +43,24 @@ Weakest metric: Speed Index at 3.8 s.
 The config is in `.lighthouserc.cjs`. After each CI run, the report can also be downloaded from the run's Artifacts section in the Actions tab.
 
 
+## Image optimisation (Task 3)
+- Compressed all images to under 100 KB each (JPG and WebP, in `assets/`)
+- Used `<picture>` with a WebP source and a JPG fallback
+- Added `loading="lazy"` to the service card images. The hero image loads immediately because it is the first thing visitors see.
+
+| Version | Performance | Report |
+|---|---|---|
+| Original baseline (SVG icons) | 98 | `reports/baseline.html` |
+| Heavy photos (before optimising) | 73 | `reports/before-images.html` |
+| After optimisation | 100 | `reports/after-images.html` |
+
+Largest Contentful Paint went from 20.6 s to 1.5 s. The page's image weight went from about 10.8 MB to 154 KB (WEBP versions).
+
+
+
 ## Roadmap
-1. Repo and home page (this task)
-2. Lighthouse baseline audit
-3. Image optimisation and lazy loading
+1. Repo and home page (done)
+2. Lighthouse baseline audit (done)
+3. Image optimisation and lazy loading (done)
 4. WCAG AA fixes and live form validation
 5. Netlify deployment, before and after report, hand-over docs

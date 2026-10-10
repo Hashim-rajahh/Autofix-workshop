@@ -22,3 +22,5 @@
 
 
 "Re-ran the audit after image optimisation; report in reports/after-images.html."
+
+The audit was re-run after the accessibility changes, with the report path.

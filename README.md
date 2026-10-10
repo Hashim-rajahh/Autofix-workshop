@@ -56,7 +56,7 @@ The config is in `.lighthouserc.cjs`. After each CI run, the report can also be 
 
 Largest Contentful Paint went from 20.6 s to 1.5 s. The page's image weight went from about 10.8 MB to 154 KB (WEBP versions).
 
-# Accessibility Report (WCAG 2.1 AA)
+# Accessibility (Task 4)
 
 ## Audit method
 Lighthouse, axe DevTools and a manual keyboard test.

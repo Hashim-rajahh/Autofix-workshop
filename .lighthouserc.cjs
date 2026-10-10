@@ -7,6 +7,11 @@ module.exports = {
     upload: {
       target: 'filesystem',
       outputDir: './lighthouse-reports'
+    },
+        assert: {
+      assertions: {
+        'categories:accessibility': ['error', { minScore: 0.9 }]
+      }
     }
   }
 };

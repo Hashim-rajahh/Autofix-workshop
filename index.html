@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <a class="skip-link" href="#top">Skip to main content</a>
   <header class="site-header">
     <div class="container header-inner">
       <a class="brand" href="#top">AutoFix <span>Workshop</span></a>
@@ -26,7 +27,7 @@
         <div class="hero-copy">
           <h1 id="hero-title">Your car, back on the road today.</h1>
           <p>Friendly local mechanics, clear prices and no surprises. Book a service or bring your car in for a free check.</p>
-          <a class="btn" href="#contact">Book a visit</a>
+          <a class="btn" href="#book">Book a visit</a>
         </div>
         <picture>
           <source type="image/webp" srcset="assets/hero.webp">
@@ -38,7 +39,7 @@
     <section id="services" class="services" aria-labelledby="services-title">
       <div class="container">
         <h2 id="services-title">What we fix</h2>
-        <ul class="card-grid">
+        <ul class="card-grid" aria-labelledby="services-title">
           <li class="card">
             <picture>
               <source type="image/webp" srcset="assets/service-engine.webp">
@@ -66,6 +67,33 @@
         </ul>
       </div>
     </section>
+    <section id="book" class="book" aria-labelledby="book-title">
+  <div class="container">
+    <div class="form-narrow">
+      <h2 id="book-title">Book a visit</h2>
+      <p>Tell us about your car and we will get back to you. All fields are required.</p>
+      <form id="contact-form" novalidate>
+        <div class="field">
+          <label for="name">Full name</label>
+          <input id="name" name="name" type="text" autocomplete="name" required aria-describedby="name-error">
+          <p class="error" id="name-error" aria-live="polite"></p>
+        </div>
+        <div class="field">
+          <label for="email">Email address</label>
+          <input id="email" name="email" type="email" autocomplete="email" required aria-describedby="email-error">
+          <p class="error" id="email-error" aria-live="polite"></p>
+        </div>
+        <div class="field">
+          <label for="message">How can we help?</label>
+          <textarea id="message" name="message" required aria-describedby="message-error"></textarea>
+          <p class="error" id="message-error" aria-live="polite"></p>
+        </div>
+        <button class="btn" type="submit">Send request</button>
+        <p id="form-status" class="form-status" role="status"></p>
+      </form>
+    </div>
+  </div>
+</section>
   </main>
 
   <footer id="contact" class="site-footer">

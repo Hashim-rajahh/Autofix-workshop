@@ -23,8 +23,13 @@ img { max-width: 100%; height: auto; display: block; }
 a { color: inherit; }
 
 :focus-visible {
-  outline: 3px solid var(--yellow);
+  outline: 3px solid var(--navy);
   outline-offset: 3px;
+}
+.site-header :focus-visible,
+.hero :focus-visible,
+.site-footer :focus-visible {
+  outline-color: var(--yellow);
 }
 
 .container {
@@ -142,3 +147,40 @@ a { color: inherit; }
   .card-grid { grid-template-columns: repeat(3, 1fr); }
   .footer-grid { grid-template-columns: repeat(3, 1fr); }
 }
+
+/* Skip link */
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -4rem;
+  background: var(--yellow);
+  color: #1b1500;
+  font-weight: 700;
+  padding: 0.6rem 1rem;
+  border-radius: var(--radius);
+  z-index: 10;
+}
+.skip-link:focus { top: 1rem; }
+.skip-link:focus-visible { outline: 3px solid var(--white); }
+
+/* Contact form */
+.book { background: var(--white); padding-block: 4rem; border-top: 1px solid #d9dee4; }
+.form-narrow { max-width: 640px; }
+.book h2 { font-size: 2rem; margin: 0 0 0.5rem; }
+.field { margin-bottom: 1.25rem; }
+.field label { display: block; font-weight: 700; margin-bottom: 0.35rem; }
+.field input,
+.field textarea {
+  width: 100%;
+  font: inherit;
+  color: var(--text);
+  background: var(--white);
+  padding: 0.7rem 0.8rem;
+  border: 2px solid #5b6b7a;
+  border-radius: 6px;
+}
+.field textarea { min-height: 8rem; resize: vertical; }
+.field [aria-invalid="true"] { border-color: #b00020; }
+.error { color: #b00020; font-weight: 600; margin: 0.35rem 0 0; }
+.form-status { color: #0b5d2a; font-weight: 700; margin: 1rem 0 0; }
+button.btn { border: 0; font: inherit; font-weight: 700; cursor: pointer; }

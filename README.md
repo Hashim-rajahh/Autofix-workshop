@@ -1,10 +1,8 @@
 # AutoFix Workshop: Speed & Accessibility Rescue
 
-Responsive home page for AutoFix Workshop, a local car repair shop. This is Task 1 of a larger project to make the site fast and WCAG AA accessible.
-
 ## What is in this repo
 - `index.html`, `style.css`, `script.js`: hero, three service cards and a contact footer
-- `assets/`: placeholder SVG images
+- `assets/`: compressed JPG and WebP images
 - `eslint.config.js` and `.github/workflows/ci.yml`: linting and CI that runs on every push
 
 ## Setup
@@ -14,7 +12,7 @@ Responsive home page for AutoFix Workshop, a local car repair shop. This is Task
 4. Open `index.html` in your browser (or use the VS Code Live Server extension)
 
 ## Live preview
-https://Hashim-rajahh.github.io/Autofix-workshop/
+https://autofix-workshop.netlify.app/
 
 ## Lighthouse audit (Task 2)
 

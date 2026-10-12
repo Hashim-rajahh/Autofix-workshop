@@ -88,9 +88,42 @@ Lighthouse Accessibility: 100 before, 100 after (`reports/after-accessibility.ht
 
 The score did not change because the page already passed Lighthouse's automatic checks. The fixes above target things automated tools cannot fully test: focus visibility on light backgrounds, keyboard navigation (skip link), and an accessible form with live validation and announced errors.
 
+
+## Live site
+https://autofix-workshop.netlify.app/
+
+![QR code linking to the AutoFix Workshop site](assets/qr-code.png)
+
+## Hand-over: before and after
+
+| Stage | Performance | Accessibility | Best Practices | SEO | Report |
+|---|---|---|---|---|---|
+| Baseline (SVG icons) | 98 | 100 | 100 | 100 | `reports/baseline.html` |
+| Heavy photos (before optimising) | 73 | 100 | 100 | 100 | `reports/before-images.html` |
+| Final (Netlify) | 84 | 100 | 100 | 100 | `reports/after.html` |
+
+Largest Contentful Paint: 20.6 s with heavy photos, 1.5 s after optimisation. Image weight: about 10.8 MB down to 154 KB.
+
+## Change log
+- Task 1: Built the responsive home page, set up the repo, ESLint and a GitHub Actions workflow.
+- Task 2: Added Lighthouse CI, the baseline report and a test plan.
+- Task 3: Compressed images under 100 KB, added WebP with JPG fallback and lazy loading.
+- Task 4: Fixed focus styles, added a skip link and an accessible contact form with live validation.
+- Task 5: Deployed to Netlify with automatic deploys, security headers, final report and this hand-over.
+
+## Security checklist
+- [x] Site served over HTTPS (Netlify)
+- [x] Security headers set in `netlify.toml`
+- [x] No passwords or API keys in the repository
+- [x] No third-party scripts or trackers
+- [x] Contact form is a demo and sends no data anywhere
+- [ ] Known issue: `npm audit` reports vulnerabilities in dev-only tools (Lighthouse CI). They are not shipped to visitors.
+
+
+
 ## Roadmap
 1. Repo and home page (done)
 2. Lighthouse baseline audit (done)
 3. Image optimisation and lazy loading (done)
-4. WCAG AA fixes and live form validation
-5. Netlify deployment, before and after report, hand-over docs
+4. WCAG AA fixes and live form validation (done)
+5. Netlify deployment, before and after report, hand-over docs (done)

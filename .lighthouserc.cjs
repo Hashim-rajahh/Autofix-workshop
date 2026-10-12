@@ -1,7 +1,7 @@
 module.exports = {
   ci: {
     collect: {
-      url: ['https://Hashim-rajahh.github.io/Autofix-workshop/'],
+      url: ['https://autofix-workshop.netlify.app/'],
       numberOfRuns: 3
     },
     upload: {

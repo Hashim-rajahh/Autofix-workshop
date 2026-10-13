@@ -93,12 +93,13 @@ https://autofix-workshop.netlify.app/
 ![QR code linking to the AutoFix Workshop site](assets/qr-code.png)
 
 ## Hand-over: before and after
+## Hand-over: before and after
 
 | Stage | Performance | Accessibility | Best Practices | SEO | Report |
 |---|---|---|---|---|---|
-| Baseline (SVG icons) | 98 | 100 | 100 | 100 | `reports/baseline.html` |
-| Heavy photos (before optimising) | 73 | 100 | 100 | 100 | `reports/before-images.html` |
-| Final (Netlify) | 84 | 100 | 100 | 100 | `reports/after.html` |
+| Baseline (SVG icons) | 98 | 100 | 100 | 100 | [baseline.html](reports/baseline.html) |
+| Heavy photos (before optimising) | 73 | 100 | 100 | 100 | [before-images.html](reports/before-images.html) |
+| Final (Netlify) | 84 | 100 | 100 | 100 | [after.html](reports/after.html) |
 
 Largest Contentful Paint: 20.6 s with heavy photos, 1.5 s after optimisation. Image weight: about 10.8 MB down to 154 KB.
 
@@ -111,9 +112,12 @@ Largest Contentful Paint: 20.6 s with heavy photos, 1.5 s after optimisation. Im
 
 ## Security checklist
 - [x] Site served over HTTPS (Netlify)
-- [x] Security headers set in `netlify.toml`
-- [x] No passwords or API keys in the repository
-- [x] No third-party scripts or trackers
+- [x] Content-Security-Policy header set in `netlify.toml`
+- [x] X-Content-Type-Options: nosniff
+- [x] Referrer-Policy: strict-origin-when-cross-origin
+- [x] Clickjacking blocked (X-Frame-Options: DENY and CSP frame-ancestors 'none')
+- [x] No inline scripts (all JavaScript is in `script.js`)
+- [x] No secrets in the repository and no third-party scripts
 - [x] Contact form is a demo and sends no data anywhere
 - [ ] Known issue: `npm audit` reports vulnerabilities in dev-only tools (Lighthouse CI). They are not shipped to visitors.
 
